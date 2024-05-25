@@ -1,12 +1,6 @@
-<div id="<%= dom_id book %>">
-  <p>
-    <strong>Title:</strong>
-    <%= book.title %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= book.body %>
-  </p>
-
-</div>
+<tr id="<%= dom_id book %>" class="tw-border-b-2 tw-border-neutral-300">
+  <td class="tw-p-4 tw-text-right"><%= book.id %></td>
+  <td class="tw-p-4"><%= book.title %></td>
+  <td class="tw-p-4"><%= book.body %></td>
+  <td class="tw-p-4 tw-text-center"><%= link_to "Show this book", book, class: "tw-text-blue-500" %></td>
+</tr>

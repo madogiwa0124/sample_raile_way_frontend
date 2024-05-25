@@ -1,6 +1,6 @@
 <%= form_with(model: book) do |form| %>
   <% if book.errors.any? %>
-    <div style="color: red">
+    <div class="tw-text-red-700">
       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
 
       <ul>
@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: 'tw-block' %>
+    <%= form.text_field :title, class: 'tw-rounded-md tw-p-2 tw-border-[1px] tw-border-neutral-300' %>
   </div>
 
   <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.label :body, class: 'tw-block' %>
+    <%= form.text_area :body, class: 'tw-rounded-md tw-p-2 tw-border-[1px] tw-border-neutral-300' %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: 'tw-p-2 tw-bg-blue-700 tw-text-white tw-rounded-md' %>
   </div>
 <% end %>

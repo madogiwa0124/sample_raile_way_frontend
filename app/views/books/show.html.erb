@@ -1,10 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<main class="tw-m-4">
+  <p class="tw-text-green-700"><%= notice %></p>
 
-<%= render @book %>
+  <h1 class="tw-text-3xl tw-mb-4"><%= @book.title %></h1>
 
-<div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Back to books", books_path %>
+  <div class="tw-mb-4">
+    <p class="tw-font-bold">body</p>
+    <p class="tw-rounded-md tw-bg-white tw-p-3"><%= @book.body %></p>
+  </div>
 
-  <%= button_to "Destroy this book", @book, method: :delete %>
-</div>
+  <div class="tw-mb-4">
+    <%= link_to "Edit this book", edit_book_path(@book), class: "tw-text-blue-500" %> |
+    <%= link_to "Back to books", books_path, class: "tw-text-blue-500" %>
+  </div>
+  <div>
+    <%= button_to "Destroy this book", @book, method: :delete, class: 'tw-p-2 tw-bg-red-700 tw-text-white tw-rounded-md' %>
+  </div>
+</main>
