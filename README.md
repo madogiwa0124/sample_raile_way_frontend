@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample for Rails way frontends.
 
-Things you may want to cover:
+This application is built with the following configuration for the frontend environment.
 
-* Ruby version
+- assets precompile with [Propshaft](https://github.com/rails/propshaft)
+- [Rollup](https://rollupjs.org/) + [JavaScript Bundling for Rails](https://github.com/rails/jsbundling-rails)
+- [TailwindCSS](https://tailwindcss.com/) + [CSS Bundling for Rails](https://github.com/rails/cssbundling-rails)
 
-* System dependencies
+## Rails server with frontwnd watch build
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+bin/dev
+```
