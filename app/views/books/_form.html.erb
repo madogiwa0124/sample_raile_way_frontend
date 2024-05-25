@@ -1,14 +1,16 @@
 <%= form_with(model: book) do |form| %>
   <% if book.errors.any? %>
-    <div class="tw-text-red-700">
-      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+    <%= render(Ui::Error::Component.new(options: { class: ['tw-mb-2'] })) do |component| %>
+      <% component.with_body do %>
+        <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
 
-      <ul>
-        <% book.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+        <ul>
+          <% book.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
   <% end %>
 
   <div>
@@ -22,6 +24,6 @@
   </div>
 
   <div>
-    <%= form.submit class: 'tw-p-2 tw-bg-blue-700 tw-text-white tw-rounded-md' %>
+    <%= render(Ui::Button.new(text: "Save this book", options: { method: :post }))%>
   </div>
 <% end %>

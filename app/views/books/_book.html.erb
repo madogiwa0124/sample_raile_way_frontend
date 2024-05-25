@@ -2,5 +2,7 @@
   <td class="tw-p-4 tw-text-right"><%= book.id %></td>
   <td class="tw-p-4"><%= book.title %></td>
   <td class="tw-p-4"><%= book.body %></td>
-  <td class="tw-p-4 tw-text-center"><%= link_to "Show this book", book, class: "tw-text-blue-500" %></td>
+  <td class="tw-p-4 tw-text-center">
+    <%= render(Ui::Link.new(text: "Show this book", path: book_path(book)))%>
+  </td>
 </tr>
