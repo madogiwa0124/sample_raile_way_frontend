@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs rollup.config.js",
-    "build:css": "tailwindcss -i ./app/frontend/css/application.tailwind.css -o ./app/assets/builds/application.css --minify"
+    "build:css": "tailwindcss -i ./app/frontend/css/application.tailwind.css -o ./app/assets/builds/tailwind.css --minify"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.0",
