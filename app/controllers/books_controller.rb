@@ -4,6 +4,7 @@ class BooksController < ApplicationController
   # GET /books
   def index
     @books = Book.all
+    render(Books::Index::Page::Component.new(books: @books))
   end
 
   # GET /books/1
